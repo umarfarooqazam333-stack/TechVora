@@ -1,4 +1,4 @@
-// Minimal JS: nav toggle, search toggle, lazy loading images
+// Minimal JS: nav toggle, lazy loading images (native-first), keyboard accessibility
 document.addEventListener('DOMContentLoaded', function(){
   const navToggle = document.querySelector('.nav-toggle');
   const mainNav = document.getElementById('main-nav');
@@ -6,11 +6,18 @@ document.addEventListener('DOMContentLoaded', function(){
     const expanded = navToggle.getAttribute('aria-expanded') === 'true';
     navToggle.setAttribute('aria-expanded', String(!expanded));
     mainNav.style.display = expanded ? 'none' : 'block';
+    // move focus into nav for keyboard users
+    if(!expanded){
+      const firstLink = mainNav.querySelector('a');
+      firstLink && firstLink.focus();
+    }
   });
 
-  // Lazy load images
-  const lazyImages = document.querySelectorAll('img.lazy');
-  if('IntersectionObserver' in window){
+  // Native lazy loading is preferred. Use IntersectionObserver as a progressive enhancement for older browsers.
+  const lazyImages = document.querySelectorAll('img[data-src].lazy');
+  if('loading' in HTMLImageElement.prototype){
+    lazyImages.forEach(img=>{img.src = img.dataset.src; img.removeAttribute('data-src'); img.classList.remove('lazy');});
+  } else if('IntersectionObserver' in window){
     let io = new IntersectionObserver((entries, obs)=>{
       entries.forEach(e=>{
         if(e.isIntersecting){
@@ -21,15 +28,13 @@ document.addEventListener('DOMContentLoaded', function(){
     });
     lazyImages.forEach(img => io.observe(img));
   } else {
-    lazyImages.forEach(img => img.src = img.dataset.src);
+    // Fallback: load immediately
+    lazyImages.forEach(img => { img.src = img.dataset.src; img.classList.remove('lazy'); });
   }
 
-  // Search button toggle (progressive enhancement)
-  const searchBtn = document.querySelector('.search-btn');
-  if(searchBtn){
-    searchBtn.addEventListener('click', ()=>{
-      const q = prompt('Search TechVora (static demo): enter keywords');
-      if(q) location.href = '/search.html?q=' + encodeURIComponent(q);
-    });
+  // Accessible skip link focus target
+  const skip = document.querySelector('.skip-link');
+  if(skip){
+    skip.addEventListener('click', (e)=>{e.preventDefault(); document.querySelector('main').focus();});
   }
 });

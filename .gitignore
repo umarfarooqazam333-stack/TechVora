@@ -1,0 +1,30 @@
+# Node / static site
+node_modules/
+dist/
+build/
+.env
+.env.local
+.DS_Store
+.vscode/
+.idea/
+/npm-debug.log*
+/yarn-debug.log*
+/yarn-error.log*
+/public/assets/tmp/
+
+# Mac
+.DS_Store
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# OS generated files
+Thumbs.db
+
+# Coverage
+coverage/
+
+# Generated search index (can be rebuilt)
+search/index.json
