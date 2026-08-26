@@ -1,35 +1,23 @@
+<!-- Update: homepage placeholders populated by client-side JS. Added IDs for dynamic content and included home.js -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>TechVora — Trusted Technology News, Reviews & Guides</title>
-  <meta name="description" content="TechVora provides original, easy-to-read articles on smartphones, Android, apps, Windows, internet guides, gadgets, reviews and comparisons. Read expert how-tos, in-depth reviews and clear buying guides.">
-  <link rel="canonical" href="https://techvora.example/">
+  <meta name="description" content="TechVora provides original, easy-to-read articles on smartphones, Android, apps, Windows, internet guides, gadgets, reviews and comparisons.">
+  <link rel="canonical" href="/">
   <meta name="robots" content="index,follow">
   <meta property="og:site_name" content="TechVora">
   <meta property="og:title" content="TechVora — Trusted Technology News, Reviews & Guides">
   <meta property="og:description" content="Original articles and guides on smartphones, apps, Windows, gadgets and more.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://techvora.example/">
-  <meta property="og:image" content="/assets/images/og-home.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@TechVora">
   <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/css/styles.css">
-  <!-- Organization structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "NewsMediaOrganization",
-    "name": "TechVora",
-    "url": "https://techvora.example/",
-    "logo": {"@type":"ImageObject","url":"https://techvora.example/assets/images/logo.svg"},
-    "sameAs": []
-  }
-  </script>
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to content</a>
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="/" aria-label="TechVora home">
@@ -60,7 +48,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero container">
       <article class="featured" aria-labelledby="featured-title">
         <figure class="featured-media">
@@ -68,46 +56,23 @@
         </figure>
         <div class="featured-content">
           <a href="/categories/reviews.html" class="kicker">Reviews</a>
-          <h1 id="featured-title"><a href="/articles/choosing-your-next-smartphone-2026.html">Choosing Your Next Smartphone in 2026: A Practical Guide</a></h1>
-          <p class="excerpt">A clear, unbiased guide that walks through battery, camera, performance and value — designed to help you pick the right phone without hype.</p>
-          <div class="meta">By <a href="/authors/jane-doe.html">Jane Doe</a> • Jul 20, 2026 • 8 min read</div>
+          <h1 id="featured-title">Featured article</h1>
+          <p class="excerpt">Featured article excerpt</p>
+          <div class="meta">By <a href="#" id="featured-author">Author</a> • <span id="featured-date">Date</span> • <span id="featured-reading">Reading time</span></div>
         </div>
       </article>
     </section>
 
     <section class="latest container" aria-labelledby="latest-heading">
       <h2 id="latest-heading">Latest Technology Articles</h2>
-      <div class="cards-grid">
-        <!-- Article cards (server/CMS will replace with real content) -->
-        <article class="card">
-          <img src="/assets/images/android-features.jpg" alt="Android features" class="card-img">
-          <div class="card-body">
-            <a class="card-category" href="/categories/android.html">Android</a>
-            <h3><a href="/articles/android-productivity-features.html">10 Practical Android Productivity Features Worth Enabling</a></h3>
-            <p class="card-excerpt">Small Android settings that make your phone faster and less frustrating in daily use.</p>
-            <div class="card-meta">Jun 18, 2026 • 6 min • <a href="/authors/john-smith.html">John Smith</a></div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="/assets/images/gadgets-2026.jpg" alt="Gadgets 2026" class="card-img">
-          <div class="card-body">
-            <a class="card-category" href="/categories/gadgets.html">Gadgets</a>
-            <h3><a href="/articles/top-budget-gadgets-2026.html">Top Budget Gadgets Under $100 — 2026</a></h3>
-            <p class="card-excerpt">Quality gadgets that won’t break the bank, tested for durability and usefulness.</p>
-            <div class="card-meta">May 05, 2026 • 5 min • <a href="/authors/jane-doe.html">Jane Doe</a></div>
-          </div>
-        </article>
-
+      <div id="latest-list" class="cards-grid" aria-live="polite">
+        <!-- Populated by assets/js/home.js -->
       </div>
     </section>
 
     <section class="trending container" aria-labelledby="trending-heading">
       <h2 id="trending-heading">Trending Now</h2>
-      <ul class="trending-list">
-        <li><a href="/articles/pixel-7a-value-analysis.html">Pixel 7a: Is it still the best value?</a></li>
-        <li><a href="/articles/windows-performance-tips.html">Windows 11 tips for better performance</a></li>
-        <li><a href="/articles/top-privacy-apps-android.html">Top privacy-first apps for Android</a></li>
+      <ul id="trending-list" class="trending-list">
       </ul>
     </section>
 
@@ -115,17 +80,11 @@
       <div class="split">
         <div>
           <h3>Mobile & Gadgets</h3>
-          <ul>
-            <li><a href="/articles/flagship-phones-compared.html">Flagship phones compared: What to look for</a></li>
-            <li><a href="/articles/best-earbuds-2026.html">Best earbuds 2026 — concise buying guide</a></li>
-          </ul>
+          <ul data-category-preview="mobile"></ul>
         </div>
         <div>
           <h3>Android & Apps</h3>
-          <ul>
-            <li><a href="/articles/android-productivity-features.html">Top Android apps for productivity</a></li>
-            <li><a href="/articles/app-permissions-guide.html">How to manage app permissions effectively</a></li>
-          </ul>
+          <ul data-category-preview="android"></ul>
         </div>
       </div>
     </section>
@@ -170,21 +129,7 @@
     <div class="copyright">&copy; 2026 TechVora. All rights reserved.</div>
   </footer>
 
+  <script src="/assets/js/home.js" defer></script>
   <script src="/assets/js/main.js" defer></script>
-  <!-- Cookie & consent placeholder: replace with your CMP script and AdSense/Analytics IDs -->
-  <script>
-    // Lightweight consent banner (non-blocking). Replace with a full CMP for AdSense compliance.
-    (function(){
-      if(!localStorage.getItem('tv_consent')){
-        var banner = document.createElement('div');
-        banner.id='consent-banner';
-        banner.style.position='fixed';banner.style.left=0;banner.style.right=0;banner.style.bottom=0;background:'#0f1722';color:'#fff';padding:'1rem';zIndex:9999;display:'flex';justifyContent:'space-between';alignItems:'center';
-        banner.innerHTML='<div style="max-width:80%">We use cookies for analytics and personalized ads. Read our <a href="/privacy-policy.html" style="color:#9fc7ff">privacy policy</a>.</div>'+
-          '<div><button id="accept-consent" style="background:var(--accent);color:#fff;border:none;padding:0.5rem 0.75rem;border-radius:6px">Accept</button></div>';
-        document.body.appendChild(banner);
-        document.getElementById('accept-consent').addEventListener('click',function(){localStorage.setItem('tv_consent','1');banner.remove();});
-      }
-    })();
-  </script>
 </body>
 </html>

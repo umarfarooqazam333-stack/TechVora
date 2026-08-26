@@ -1,28 +1,42 @@
--- Updated sitemap generated for the starter site --
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://techvora.example/</loc>
+    <loc>/</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://techvora.example/about.html</loc>
+    <loc>/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://techvora.example/contact.html</loc>
+    <loc>/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://techvora.example/categories/mobile.html</loc>
+    <loc>/articles/choosing-your-next-smartphone-2026.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>/articles/android-productivity-features.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>/articles/top-budget-gadgets-2026.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>/categories/mobile.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://techvora.example/categories/android.html</loc>
+    <loc>/categories/android.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

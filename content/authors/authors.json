@@ -1,0 +1,16 @@
+{
+  "authors": [
+    {
+      "slug": "jane-doe",
+      "name": "Jane Doe",
+      "bio": "Senior Editor focused on mobile reviews and practical buying guides. Jane writes clear, source-based articles and prioritizes verified testing.",
+      "avatar": "/assets/images/authors/jane-doe.png"
+    },
+    {
+      "slug": "john-smith",
+      "name": "John Smith",
+      "bio": "Staff writer covering Android, apps, and privacy-minded guides. John focuses on actionable tips for everyday users.",
+      "avatar": "/assets/images/authors/john-smith.png"
+    }
+  ]
+}

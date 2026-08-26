@@ -1,11 +1,28 @@
-<!doctype xml>
+<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
     <title>TechVora</title>
-    <link>https://techvora.example/</link>
+    <link>/</link>
     <description>TechVora — Technology news and guides</description>
     <language>en-US</language>
     <lastBuildDate>Wed, 26 Aug 2026 00:00:00 +0000</lastBuildDate>
-    <!-- Add items via your CMS or deploy script -->
+    <item>
+      <title>Choosing Your Next Smartphone in 2026</title>
+      <link>/articles/choosing-your-next-smartphone-2026.html</link>
+      <pubDate>Wed, 20 Jul 2026 00:00:00 +0000</pubDate>
+      <description>A practical guide that walks through battery, camera, performance and value so you can choose the right smartphone without hype.</description>
+    </item>
+    <item>
+      <title>10 Practical Android Productivity Features Worth Enabling</title>
+      <link>/articles/android-productivity-features.html</link>
+      <pubDate>Thu, 18 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Ten Android settings and features that improve daily productivity and reduce friction.</description>
+    </item>
+    <item>
+      <title>Top Budget Gadgets Under $100 — 2026 Picks</title>
+      <link>/articles/top-budget-gadgets-2026.html</link>
+      <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
+      <description>A curated starter list of durable, useful gadgets under $100.</description>
+    </item>
   </channel>
 </rss>

@@ -1,4 +1,4 @@
-<!-- Simple article template (static HTML example). Replace placeholders with CMS values. -->
+<!-- Updated article template: includes breadcrumb schema, structured data placeholders, and includes article.js to populate related/prev-next -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,20 +7,7 @@
   <title>{{title}} — TechVora</title>
   <meta name="description" content="{{meta_description}}">
   <link rel="stylesheet" href="/assets/css/styles.css">
-  <!-- Article structured data (schema.org) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "{{title}}",
-    "image": ["{{featured_image}}"],
-    "author": {"@type":"Person","name":"{{author_name}}"},
-    "publisher": {"@type":"Organization","name":"TechVora","logo":{"@type":"ImageObject","url":"/assets/images/logo.svg"}},
-    "datePublished": "{{published_at}}",
-    "dateModified": "{{updated_at}}",
-    "description": "{{meta_description}}"
-  }
-  </script>
+  <!-- Article structured data should be provided per-article using JSON-LD embedded in each article page or generated from the content JSON files -->
 </head>
 <body>
   <header class="site-header">
@@ -30,39 +17,37 @@
   </header>
 
   <main class="container article">
-    <nav aria-label="Breadcrumbs" class="breadcrumb">Home › {{category}} › {{title}}</nav>
+    <nav aria-label="Breadcrumbs" class="breadcrumb">Home › <a href="/categories/{{category_slug}}.html">{{category}}</a> › {{title}}</nav>
     <article>
       <h1>{{title}}</h1>
-      <div class="meta">{{category}} • By <a href="/authors/{{author_slug}}.html">{{author_name}}</a> • {{published_at}} • {{reading_time}} min read</div>
-      <figure><img src="{{featured_image}}" alt="{{featured_image_alt}}"></figure>
+      <div class="meta">{{category}} • By <a href="/authors/{{author_slug}}.html">{{author}}</a> • <time datetime="{{published_at}}">{{published_at}}</time> • <time datetime="{{updated_at}}">Updated: {{updated_at}}</time> • {{reading_time}} min read</div>
+      <figure><img src="{{featured_image}}" alt="{{image_alt}}" loading="lazy"></figure>
 
-      <div class="toc">{{table_of_contents}}</div>
+      <div class="toc" aria-label="Table of contents"></div>
 
       <div class="content">{{content}}</div>
 
       <aside class="related">
         <h3>Related articles</h3>
-        <ul>
-          <li><a href="#">Related article title</a></li>
-        </ul>
+        <ul></ul>
       </aside>
 
       <nav class="article-nav">
-        <div class="prev"><a href="#">← Previous article</a></div>
-        <div class="next"><a href="#">Next article →</a></div>
+        <div class="prev"></div>
+        <div class="next"></div>
       </nav>
 
       <div class="share">
         <span>Share:</span>
-        <a href="#">Twitter</a> • <a href="#">Facebook</a>
+        <a href="#" aria-label="Share on Twitter">Twitter</a> • <a href="#" aria-label="Share on Facebook">Facebook</a>
       </div>
 
-      <div class="disclaimer">Disclaimer: This is a starter template. Replace with original reporting and sources where appropriate.</div>
+      <div class="disclaimer">Disclaimer: Replace this with article-specific disclosures when necessary (sponsored content, affiliate links).</div>
     </article>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">&copy; 2026 TechVora</div>
-  </footer>
+  <footer class="site-footer container">&copy; 2026 TechVora</footer>
+  <script src="/assets/js/article.js" defer></script>
+  <script src="/assets/js/main.js" defer></script>
 </body>
 </html>

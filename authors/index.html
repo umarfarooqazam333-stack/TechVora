@@ -11,11 +11,19 @@
   <header class="site-header"><div class="container header-inner"><a class="logo" href="/"><img src="/assets/images/logo.svg" alt="TechVora logo" class="logo-img"><span class="brand">TechVora</span></a></div></header>
   <main class="container">
     <h1>Authors</h1>
-    <ul>
-      <li><a href="/authors/jane-doe.html">Jane Doe — Senior Editor</a></li>
-      <li><a href="/authors/john-smith.html">John Smith — Staff Writer</a></li>
-    </ul>
+    <div id="authors-list" class="cards-grid"></div>
   </main>
   <footer class="site-footer container">&copy; 2026 TechVora</footer>
+  <script>
+    // Populate authors list from content/authors/authors.json
+    (async function(){
+      try{
+        const resp = await fetch('/content/authors/authors.json');
+        const data = await resp.json();
+        const el = document.getElementById('authors-list');
+        el.innerHTML = data.authors.map(a=>`<article class="card"><div class="card-body"><h3><a href="/authors/${a.slug}.html">${a.name}</a></h3><p class="card-excerpt">${a.bio}</p></div></article>`).join('');
+      }catch(err){console.error('Failed to load authors', err)}
+    })();
+  </script>
 </body>
 </html>
