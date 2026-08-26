@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60" role="img" aria-label="TechVora logo">
+  <!-- Minimal TV monogram + wordmark -->
+  <g fill="none" fill-rule="evenodd">
+    <rect width="200" height="60" fill="transparent"/>
+    <g transform="translate(6,6)">
+      <!-- icon: stylized T+V -->
+      <path d="M12 0h10v8h8v6h-8v20h-10V14H4V8h8z" fill="#0066FF"/>
+      <g transform="translate(34,4)">
+        <text x="0" y="22" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#0F1722">TechVora</text>
+      </g>
+    </g>
+  </g>
+</svg>

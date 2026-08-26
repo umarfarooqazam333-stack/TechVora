@@ -1,0 +1,68 @@
+<!-- Simple article template (static HTML example). Replace placeholders with CMS values. -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{title}} — TechVora</title>
+  <meta name="description" content="{{meta_description}}">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <!-- Article structured data (schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{title}}",
+    "image": ["{{featured_image}}"],
+    "author": {"@type":"Person","name":"{{author_name}}"},
+    "publisher": {"@type":"Organization","name":"TechVora","logo":{"@type":"ImageObject","url":"/assets/images/logo.svg"}},
+    "datePublished": "{{published_at}}",
+    "dateModified": "{{updated_at}}",
+    "description": "{{meta_description}}"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/"><img src="/assets/images/logo.svg" alt="TechVora logo" class="logo-img"><span class="brand">TechVora</span></a>
+    </div>
+  </header>
+
+  <main class="container article">
+    <nav aria-label="Breadcrumbs" class="breadcrumb">Home › {{category}} › {{title}}</nav>
+    <article>
+      <h1>{{title}}</h1>
+      <div class="meta">{{category}} • By <a href="/authors/{{author_slug}}.html">{{author_name}}</a> • {{published_at}} • {{reading_time}} min read</div>
+      <figure><img src="{{featured_image}}" alt="{{featured_image_alt}}"></figure>
+
+      <div class="toc">{{table_of_contents}}</div>
+
+      <div class="content">{{content}}</div>
+
+      <aside class="related">
+        <h3>Related articles</h3>
+        <ul>
+          <li><a href="#">Related article title</a></li>
+        </ul>
+      </aside>
+
+      <nav class="article-nav">
+        <div class="prev"><a href="#">← Previous article</a></div>
+        <div class="next"><a href="#">Next article →</a></div>
+      </nav>
+
+      <div class="share">
+        <span>Share:</span>
+        <a href="#">Twitter</a> • <a href="#">Facebook</a>
+      </div>
+
+      <div class="disclaimer">Disclaimer: This is a starter template. Replace with original reporting and sources where appropriate.</div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">&copy; 2026 TechVora</div>
+  </footer>
+</body>
+</html>

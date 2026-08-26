@@ -1,0 +1,52 @@
+/* Minimal, modern, responsive CSS for TechVora starter site */
+:root{
+  --bg:#ffffff;
+  --text:#0f1722;
+  --muted:#6b7280;
+  --accent:#0066ff; /* primary accent color - change if desired */
+  --card:#ffffff;
+  --radius:12px;
+  --max-width:1100px;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased}
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+.site-header{border-bottom:1px solid #e6e9ee;background:linear-gradient(180deg, #fff, #fff);position:sticky;top:0;z-index:40}
+.header-inner{display:flex;align-items:center;gap:1rem;padding:0.75rem 0}
+.logo{display:flex;align-items:center;gap:0.5rem;text-decoration:none;color:inherit}
+.logo-img{width:44px;height:44px}
+.brand{font-weight:700;font-size:1.125rem}
+.nav-toggle{display:none;background:none;border:1px solid transparent;padding:0.5rem;border-radius:8px}
+.main-nav ul{display:flex;gap:0.75rem;list-style:none;margin:0;padding:0}
+.main-nav a{text-decoration:none;color:var(--text);padding:0.35rem 0.5rem;border-radius:8px}
+.main-nav a:hover{background:#f1f5f9}
+.header-actions{margin-left:auto}
+.hero{padding:1.5rem 0}
+.featured{display:grid;grid-template-columns:1fr;gap:1rem;align-items:center}
+.featured-media{width:100%;border-radius:var(--radius);overflow:hidden}
+.featured-content .kicker{display:inline-block;background:linear-gradient(90deg,var(--accent),#4f46e5);color:#fff;padding:0.25rem 0.5rem;border-radius:6px;text-decoration:none;font-size:0.85rem}
+.featured-content h1{margin:0.5rem 0 0;font-size:1.5rem}
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.card{background:var(--card);border-radius:var(--radius);box-shadow:0 6px 18px rgba(13,18,25,0.04);overflow:hidden}
+.card-img{width:100%;height:150px;object-fit:cover;display:block;background:#f3f4f6}
+.card-body{padding:0.75rem}
+.card-category{font-size:0.8rem;color:var(--accent);text-decoration:none}
+.card h3{margin:0.5rem 0}
+.card-excerpt{color:var(--muted);font-size:0.95rem}
+.meta,.card-meta{font-size:0.85rem;color:var(--muted)}
+.trending-list{display:flex;gap:1rem;list-style:none;padding:0;margin:0;flex-wrap:wrap}
+.trending-list a{text-decoration:none;color:var(--accent)}
+.newsletter{padding:1.25rem;background:#f8fafc;border-radius:12px;margin:1rem 0}
+.newsletter-form{display:flex;gap:0.5rem;max-width:540px}
+.newsletter-form input{flex:1;padding:0.6rem;border-radius:8px;border:1px solid #e6e9ee}
+.newsletter-form button{background:var(--accent);color:#fff;border:none;padding:0.6rem 1rem;border-radius:8px}
+.site-footer{border-top:1px solid #e6e9ee;padding:2rem 0;margin-top:2rem;background:#fff}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
+.muted{color:var(--muted)}
+.visually-hidden{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+@media(max-width:800px){
+  .main-nav ul{display:none}
+  .nav-toggle{display:inline-block}
+  .featured-content h1{font-size:1.25rem}
+  .footer-grid{grid-template-columns:1fr}
+}
