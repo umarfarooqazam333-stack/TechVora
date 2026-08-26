@@ -1,0 +1,11 @@
+<!doctype xml>
+<rss version="2.0">
+  <channel>
+    <title>TechVora</title>
+    <link>https://techvora.example/</link>
+    <description>TechVora — Technology news and guides</description>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 26 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <!-- Add items via your CMS or deploy script -->
+  </channel>
+</rss>

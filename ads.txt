@@ -1,0 +1,7 @@
+# Ads.txt placeholder for TechVora
+# Replace the following line with your actual AdSense/ads.txt seller entries provided by ad partners.
+# Format: <domain>, <publisher_id>, <relationship>, <authority_id (optional)>
+# Example: google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+
+# Add your ad partners below:
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
