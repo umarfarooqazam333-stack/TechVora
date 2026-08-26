@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/</loc>
+    <loc>/TechVora/</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>/about.html</loc>
+    <loc>/TechVora/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/contact.html</loc>
+    <loc>/TechVora/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>/articles/choosing-your-next-smartphone-2026.html</loc>
+    <loc>/TechVora/articles/choosing-your-next-smartphone-2026.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>/articles/android-productivity-features.html</loc>
+    <loc>/TechVora/articles/android-productivity-features.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/articles/top-budget-gadgets-2026.html</loc>
+    <loc>/TechVora/articles/top-budget-gadgets-2026.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/categories/mobile.html</loc>
+    <loc>/TechVora/categories/mobile.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/categories/android.html</loc>
+    <loc>/TechVora/categories/android.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
