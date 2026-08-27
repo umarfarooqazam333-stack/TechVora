@@ -2,7 +2,14 @@
 
 document.addEventListener('DOMContentLoaded', async function(){
   try{
-    const resp = await fetch('/search/index.json');
+    // Respect base href for GitHub Pages compatibility
+    function getBasePath(){
+      const base = document.querySelector('base');
+      return base ? base.getAttribute('href') || '' : '';
+    }
+    const basePath = getBasePath();
+    const searchIndexUrl = basePath + 'search/index.json';
+    const resp = await fetch(searchIndexUrl);
     const docs = await resp.json();
     const path = location.pathname;
     const match = path.match(/\/categories\/(.+)\.html$/);
